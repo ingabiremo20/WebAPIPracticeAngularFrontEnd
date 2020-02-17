@@ -8,11 +8,17 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 
+
 // import services 
 
 import {PostService} from './post.service';
 import { AppRouterModele } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
+//add material design 
+import { MatSliderModule } from '@angular/material/slider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +30,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRouterModele,
     HttpClientModule,
-    AppRoutingModule
+    MatSliderModule,
+    MatButtonModule,
+    MatTableModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
