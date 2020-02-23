@@ -19,12 +19,22 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+
+import { CreatePostComponent } from './create-post/create-post.component';
+//Forms
+import{ReactiveFormsModule} from '@angular/forms';
+  import { from } from 'rxjs';
+
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,11 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatTableModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
