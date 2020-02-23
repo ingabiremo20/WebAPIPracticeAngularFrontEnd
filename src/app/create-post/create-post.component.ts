@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-post',
@@ -11,7 +11,10 @@ export class CreatePostComponent  {
   constructor() { }
 
 AddPostForm = new FormGroup({
-  title: new FormControl(''),
-  description: new FormControl('')
+  title: new FormControl('', Validators.required),
+  description: new FormControl('', Validators.required)
 })
+onSubmit(){
+  console.log(this.AddPostForm.value);
+}
 }

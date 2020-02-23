@@ -12,7 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 // import services 
 
 import {PostService} from './post.service';
-import { AppRouterModele } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
 //add material design 
 import { MatSliderModule } from '@angular/material/slider';
@@ -37,8 +36,7 @@ import{ReactiveFormsModule} from '@angular/forms';
     CreatePostComponent
   ],
   imports: [
-    BrowserModule,
-    AppRouterModele,
+    BrowserModule,  
     HttpClientModule,
     MatSliderModule,
     MatButtonModule,
