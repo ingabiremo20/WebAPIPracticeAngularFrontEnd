@@ -1,0 +1,17 @@
+ <h2 mat-dialog-title> Update post</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="example-full-width"  >
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="title" formControlName="title">
+      </mat-form-field>
+    <br>
+      <mat-form-field class="example-full-width" >
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Leave a comment" formControlName="description"></textarea>
+      </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>

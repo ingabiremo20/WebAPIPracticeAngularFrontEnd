@@ -21,11 +21,14 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { CreatePostComponent } from './create-post/create-post.component';
 //Forms
 import{ReactiveFormsModule} from '@angular/forms';
   import { from } from 'rxjs';
+import { UpdatePostComponent } from './update-post/update-post.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import{ReactiveFormsModule} from '@angular/forms';
     PostComponent,
     HeaderComponent,
     FooterComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    UpdatePostComponent
   ],
   imports: [
     BrowserModule,  
@@ -41,14 +45,18 @@ import{ReactiveFormsModule} from '@angular/forms';
     MatSliderModule,
     MatButtonModule,
     MatTableModule,
+    MatDialogModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatToolbarModule
   ],
+ 
   providers: [PostService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UpdatePostComponent]
 })
 export class AppModule { }
