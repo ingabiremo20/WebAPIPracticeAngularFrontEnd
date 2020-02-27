@@ -17,4 +17,10 @@ return this.http.post(this.baseUrl, post);
   updatePost(id, post) {
     return this.http.put(this.baseUrl+'/'+id,post);
   }
+  getPost(id){
+    return this.http.get(this.baseUrl+'/'+id);
+  }
+  deletePost(id){
+    return this.http.delete(this.baseUrl+'/'+id);
+  }
 }

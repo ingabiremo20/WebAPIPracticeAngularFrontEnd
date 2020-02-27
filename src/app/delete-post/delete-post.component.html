@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-header>
+    
+      <mat-card-title>Do you want to delete this post?</mat-card-title>
+      </mat-card-header>
+     <mat-card-content>
+      <mat-list>
+      <mat-list-item>
+          <b>Title:</b>{{post.title}}
+
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>Description:</b>{{post.description}}
+      </mat-list-item>     
+      </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn"  (click)="cancel()">Cancel</button>
+      <button mat-raised-button color="primary" (click)="confirm()">Confirm</button>
+    </mat-card-actions>
+  </mat-card>
+  

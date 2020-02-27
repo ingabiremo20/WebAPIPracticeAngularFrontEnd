@@ -29,7 +29,8 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import{ReactiveFormsModule} from '@angular/forms';
   import { from } from 'rxjs';
 import { UpdatePostComponent } from './update-post/update-post.component';
-
+import { DeletePostComponent } from './delete-post/delete-post.component';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { UpdatePostComponent } from './update-post/update-post.component';
     HeaderComponent,
     FooterComponent,
     CreatePostComponent,
-    UpdatePostComponent
+    UpdatePostComponent,
+    DeletePostComponent
   ],
   imports: [
     BrowserModule,  
@@ -52,7 +54,8 @@ import { UpdatePostComponent } from './update-post/update-post.component';
     MatInputModule,
     MatCardModule,
     MatFormFieldModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule
   ],
  
   providers: [PostService],
