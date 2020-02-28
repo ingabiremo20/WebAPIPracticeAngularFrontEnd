@@ -23,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
 
 import { CreatePostComponent } from './create-post/create-post.component';
 //Forms
@@ -55,7 +56,8 @@ import {MatListModule} from '@angular/material/list';
     MatCardModule,
     MatFormFieldModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ],
  
   providers: [PostService],
