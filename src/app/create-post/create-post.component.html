@@ -1,16 +1,19 @@
-<p>ADD POST</p>
+
 <mat-card>
+  
     <form class="example-form" [formGroup]="AddPostForm" (ngSubmit)="onSubmit()" > 
+      <h1>ADD POST</h1>
         <mat-form-field class="example-full-width"  >
           <mat-label>Title</mat-label>
           <input matInput placeholder="title" formControlName="title">
         </mat-form-field>
-      
+      <br>
         <mat-form-field class="example-full-width" >
           <mat-label>Leave a comment</mat-label>
           <textarea matInput placeholder="Leave a comment" formControlName="description"></textarea>
         </mat-form-field>
-        <button mat-raised-button  class="new-form-btn" [disabled]="!AddPostForm.valid">Post</button>
+        <br>
+        <button mat-raised-button  class="new-form-btn" [disabled]="!AddPostForm.valid" >Post</button>
       </form>   
     
 </mat-card>

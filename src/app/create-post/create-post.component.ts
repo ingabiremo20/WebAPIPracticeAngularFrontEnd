@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from '../post.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { PostService } from '../post.service';
 })
 export class CreatePostComponent  {
 
-  constructor(private service: PostService) { }
+  constructor(private service: PostService,private route:ActivatedRoute,
+    private router:Router) { }
 
 AddPostForm = new FormGroup({
   title: new FormControl('', Validators.required),
@@ -19,6 +21,7 @@ onSubmit(){
   console.log(this.AddPostForm.value);
   this.service.AddPost(this.AddPostForm.value).subscribe((data)=> {
     console.log('data -', data);
-  })
+    this.router.navigate(['/']);
+})
 }
 }
